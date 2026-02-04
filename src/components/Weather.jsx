@@ -75,7 +75,7 @@ const Weather = () => {
                 <img src={search_icon} alt="#"  onClick={()=> search(inputRef.current.value)}/>
             </div>
 
-            {vessage && <p className='error-message'>{message}</p>}
+            {message && <p className='error-message'>{message}</p>}
 
             <img src={weatherData.icon || clear_icon} alt="№" className='weather-icon' />
             <p className='temperature'>{weatherData.temperature ? `${weatherData.temperature}C`: ''}</p>
@@ -102,5 +102,6 @@ const Weather = () => {
        
     )
 }
+
 
 export default Weather
